@@ -58,7 +58,6 @@ type postProps = {
 const PostItem = () => {
   const router = useRouter()
   const { query: { id } } = useRouter()
-  if (id === undefined) return <div>No Data</div>
 
   const { data, isLoading, isFetching } = usePostDetail(id)
 

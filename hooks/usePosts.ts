@@ -38,12 +38,12 @@ const usePosts = (pagination: number) => {
   return useQuery(['posts', pagination], () => fetchPosts(pagination))
 }
 
-const fetchPostDetail = async (id: string | string[]) => {
+const fetchPostDetail = async (id: string | string[] | undefined) => {
   const result: PostData = await (await fetch(`https://6144e843411c860017d256f0.mockapi.io/api/v1/posts/${id}`)).json()
   return result
 }
 
-const usePostDetail = (id: string | string[]) => {
+const usePostDetail = (id: string | string[] | undefined) => {
   return useQuery(['postDetail', id], () => fetchPostDetail(id))
 }
 
