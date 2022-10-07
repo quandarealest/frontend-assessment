@@ -55,7 +55,7 @@ type postProps = {
   ]
 }
 
-const postItem = () => {
+const PostItem = () => {
   const router = useRouter()
   const { query: { id } } = useRouter()
   if (id === undefined) return <div>No Data</div>
@@ -165,4 +165,4 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (cont
   }
 }
 
-export default postItem
+export default PostItem
